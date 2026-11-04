@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h1>Simple Calculator</h1>
+
+        <input type="text" id="display" value="0" readonly>
+
+        <div class="buttons">
+
+            <button onclick="clearDisplay()" class="clear">C</button>
+            <button onclick="deleteLast()">⌫</button>
+            <button onclick="chooseOperator('%')">%</button>
+            <button onclick="chooseOperator('/')" class="operator">÷</button>
+
+            <button onclick="inputNumber('7')">7</button>
+            <button onclick="inputNumber('8')">8</button>
+            <button onclick="inputNumber('9')">9</button>
+            <button onclick="chooseOperator('*')" class="operator">×</button>
+
+            <button onclick="inputNumber('4')">4</button>
+            <button onclick="inputNumber('5')">5</button>
+            <button onclick="inputNumber('6')">6</button>
+            <button onclick="chooseOperator('-')" class="operator">−</button>
+
+            <button onclick="inputNumber('1')">1</button>
+            <button onclick="inputNumber('2')">2</button>
+            <button onclick="inputNumber('3')">3</button>
+            <button onclick="chooseOperator('+')" class="operator">+</button>
+
+            <button onclick="inputNumber('0')" class="zero">0</button>
+            <button onclick="inputDecimal()">.</button>
+            <button onclick="calculate()" class="equals">=</button>
+
+        </div>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

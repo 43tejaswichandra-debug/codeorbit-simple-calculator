@@ -1,0 +1,132 @@
+/* Remove default spacing and set the basic page style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202124;
+    font-family: Arial, sans-serif;
+}
+
+/* Main calculator */
+.calculator {
+    width: 380px;
+    padding: 25px;
+    background-color: #202124;
+    border: 2px solid #ffffff;
+    border-radius: 18px;
+}
+
+/* Calculator heading */
+.calculator h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Display screen */
+#display {
+    width: 100%;
+    height: 75px;
+    margin-bottom: 12px;
+    padding: 10px 18px;
+    border: 2px solid #f5a623;
+    border-radius: 16px;
+    background-color: #202124;
+    color: #ffffff;
+    font-size: 38px;
+    text-align: right;
+    outline: none;
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* All calculator buttons */
+.buttons button {
+    height: 58px;
+    border: none;
+    border-radius: 30px;
+    background-color: #303134;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Button hover effect */
+.buttons button:hover {
+    background-color: #45474a;
+}
+
+/* Button press effect */
+.buttons button:active {
+    transform: scale(0.95);
+}
+
+/* Operator buttons */
+.buttons .operator {
+    background-color: #303134;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+/* Clear button */
+.buttons .clear {
+    color: #8ab4f8;
+}
+
+/* Equals button */
+.buttons .equals {
+    background-color: #4285f4;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.buttons .equals:hover {
+    background-color: #5a95f5;
+}
+
+/* Make the zero button wider */
+.buttons .zero {
+    grid-column: span 2;
+}
+
+/* Message for errors */
+#message {
+    min-height: 22px;
+    margin-top: 12px;
+    color: #f28b82;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 450px) {
+    .calculator {
+        width: 95%;
+        padding: 18px;
+    }
+
+    #display {
+        height: 65px;
+        font-size: 32px;
+    }
+
+    .buttons button {
+        height: 52px;
+        font-size: 16px;
+    }
+}
